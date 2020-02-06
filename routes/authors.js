@@ -39,7 +39,7 @@ router.post('/', async (req, res) => {
             errorMessage: 'Error creating Author'
         })
     }
-    // the try catch block does the exact same as this commented out code below
+    // The try catch block does the exact same as this commented out code below
 
 /*     author.save((err, newAuthor) => {
         if (err) {
