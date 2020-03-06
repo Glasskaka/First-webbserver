@@ -1,9 +1,10 @@
 {
-  "name": "First",
+  "name": "first-webserver",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
+    "build": "gulp style",
     "start": "node server.js",
     "devStart": "nodemon server.js"
   },
@@ -28,6 +29,8 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
     "nodemon": "^2.0.1"
   }
 }

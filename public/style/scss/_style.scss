@@ -1,0 +1,29 @@
+
+.filepond--root{
+    max-height: 150px;
+    position: static;
+    margin: 0;
+}
+
+input, textarea {
+    width: 175px;
+}
+select{
+    width: 180px;
+}
+.form-data{
+    height: 50px;
+    align-items: center;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.file-data{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cover-content{
+    width: 50%;
+}
