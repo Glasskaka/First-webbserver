@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "devStart": "nodemon server.js",
-    "heroku-postbuild": "gulp style"
+    "build": "gulp style"
   },
   "repository": {
     "type": "git",
