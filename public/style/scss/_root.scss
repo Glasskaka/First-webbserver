@@ -1,0 +1,28 @@
+:root {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(56, 33, 206);
+    color: goldenrod;
+
+}
+
+a, a:visited {
+    color: floralwhite;
+}
+
+main {
+    padding: 1rem;
+    
+    @media only screen and (max-width: 600px) {
+        margin-left: 0;
+    }
+
+    @media only screen and (min-width: 601px) {
+        margin-left: 5rem;
+    }
+
+}
