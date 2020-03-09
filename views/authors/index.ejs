@@ -4,10 +4,9 @@
     <input type="text" name="name" value="<%= searchOptions.name %> ">
     <button type="submit">Search</button>
 </form>
-<br>
 <% authors.forEach(author => { %> 
-    <div><%= author.name %> </div>
-    <a href="/authors/<%= author.id %>">View</a>
-    <a href="/authors/<%= author.id %>/edit">Edit</a>
+    <h3><%= author.name %></h3>
+    <a class="button" href="/authors/<%= author.id %>">View</a>
+    <a class="button button-edit" href="/authors/<%= author.id %>/edit">Edit</a>
     <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %> 
 <% }) %> 

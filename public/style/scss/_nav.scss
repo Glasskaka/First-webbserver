@@ -21,6 +21,10 @@ header {
                 &:first-child {
                    background-color: #111; 
                 }
+                
+                &:last-child {
+                    margin-top: auto;
+                }
             }
 
             a {
@@ -37,7 +41,7 @@ header {
                     filter: grayscale(0%) opacity(1);
 
                     i {
-                        color: rgb(204, 0, 255);
+                        color: #dda15e;
                     }
                 }
             }
