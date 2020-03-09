@@ -1,8 +1,48 @@
 .main-container {
     //make grid
     justify-content: center;
+    grid-auto-rows: auto;
+    grid-gap: 0.5rem 1rem;
+    grid-template-areas: 
+    "title title title"
+    "search search search"
+    "author . buttons";
 }
+
+h2 {
+    grid-area: title;
+    justify-self: center;
+}
+
+.author-search {
+    grid-area: search;
+}
+
+h3 {
+    grid-area: author;
+    justify-self: center;
+}
+
+.buttons {
+    grid-area: buttons;
+    align-self: center;
+}
+
 
 a.button {
     display: inline;
+}
+
+.author-search {
+    display: flex;
+    justify-content: space-between;
+
+    input, label {
+        align-self: center;
+    }
+
+    input {
+        flex-grow: 2;
+        margin: 0 0.8rem;
+    }
 }
