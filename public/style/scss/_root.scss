@@ -1,21 +1,27 @@
 :root {
     font-size: 16px;
+    font-family: 'Hind Madurai', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(56, 33, 206);
-    color: goldenrod;
+    background: linear-gradient(90deg, #182848 0%, #000851 100%);
+    color: #cbc9ad;
+}
 
+h1, h2, h3, h4 {
+    color: #dda15e;
 }
 
 a, a:visited {
-    color: floralwhite;
+    color: #cbc9ad;
+    text-decoration: none;
 }
 
 main {
     padding: 1rem;
+    display: grid;
     
     @media only screen and (max-width: 600px) {
         margin-left: 0;
@@ -25,4 +31,8 @@ main {
         margin-left: 5rem;
     }
 
+}
+
+.inline {
+    display: inline;
 }

@@ -1,0 +1,26 @@
+button, .button {
+    padding: 3px ;
+    border-radius: 10px;
+    background-color: initial;
+    border: 2px solid;
+    color: #cbc9ad;
+    border-color: #cbc9ad;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+.button-remove, a.button-remove, button.button-remove {
+    color: #bc6c25;
+    border-color: #bc6c25;
+}
+
+.button-edit, a.button-edit, button.button-edit {
+    color: #117cc4;
+    border-color: #117cc4;
+}
+
+.button-create, a.button-create, button.button-create {
+    color: #38a700;
+    border-color: #38a700;
+}
