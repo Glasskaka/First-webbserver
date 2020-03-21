@@ -1,8 +1,44 @@
-.main-container {
-    //make grid
+.author-container {
+    display:grid;
     justify-content: center;
+    grid-row-gap: 1rem;
 }
 
-a.button {
-    display: inline;
+.author-title {
+
+    justify-self: center;
 }
+
+.author-search {
+    display: flex;
+    justify-content: space-between;
+
+    input, label {
+        align-self: center;
+    }
+
+    input {
+        flex-grow: 2;
+        margin: 0 0.8rem;
+    }
+}
+
+.author-list {
+    border-top: 2px solid burlywood;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fill);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+        margin-right: 0.5rem;
+    }
+
+}
+
