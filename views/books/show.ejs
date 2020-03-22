@@ -1,10 +1,12 @@
-<h2><%= book.title %> </h2>
+<h2 class="section-title no-margin-bot"><%= book.title %> </h2>
 <img src="<%= book.coverImagePath %> ">
-<div>Author: <%= book.author.name %> </div>
-<div>Publish Date: <%= book.publishDate.toDateString() %> </div>
-<div>Page Count: <%= book.pageCount %> </div>
-<div>Description: <%= book.description %> </div>
+<div class="section-book-info"><b>Author:</b> <ins><%= book.author.name %></ins></div>
+<div class="section-book-info"><b>Publish Date:</b> <ins><%= book.publishDate.toDateString() %></ins></div>
+<div class="section-book-info"><b>Page Count:</b> <ins><%= book.pageCount %></ins></div>
+<div class="section-description"><b>Description:</b> <ins><%= book.description %></ins></div>
 
-<a class="button" href="/authors/<%= book.author.id %> ">View author</a>
-<a class="button button-edit" href="/books/<%= book.id %>/edit ">Edit</a>
-<%- include('../partials/deleteForm', {url: `/books/${book.id}`}) %> 
+<div id="view-edit-remove-btn">
+    <a class="button" href="/authors/<%= book.author.id %> ">View Author</a>
+    <a class="button button-edit" href="/books/<%= book.id %>/edit ">Edit</a>
+    <%- include('../partials/deleteForm', {url: `/books/${book.id}`}) %> 
+</div>

@@ -3,23 +3,29 @@ button, .button {
     border-radius: 10px;
     background-color: initial;
     border: 2px solid;
-    color: #cbc9ad;
-    border-color: #cbc9ad;
+    color: $btn-basic;
+    border-color: $btn-basic;
     font-size: 16px;
+    outline: none;
+    font-family: $main-font;
     cursor: pointer;
+    @include btnHover($btn-basic);
 }
 
 .button-remove, a.button-remove, button.button-remove {
-    color: #bc6c25;
-    border-color: #bc6c25;
+    color: $btn-remove;
+    border-color: $btn-remove;
+    @include btnHover($btn-remove);
 }
 
 .button-edit, a.button-edit, button.button-edit {
-    color: #117cc4;
-    border-color: #117cc4;
+    color: $btn-edit;
+    border-color: $btn-edit;
+    @include btnHover($btn-edit);
 }
 
 .button-create, a.button-create, button.button-create {
-    color: #38a700;
-    border-color: #38a700;
+    color: $btn-create;
+    border-color: $btn-create;
+    @include btnHover($btn-create);
 }

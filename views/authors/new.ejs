@@ -1,6 +1,8 @@
-<h2>Add New Author</h2>
-<form action="/authors" method="POST">
+<h2 class="section-title">Add a New Author</h2>
+<form class="section-search" action="/authors" method="POST">
     <%- include('_form_fields') %> 
-    <button class="button-create" type="submit">Create</button>
-    <a class="button button-remove" href="/authors">Cancel</a>   
+    <div id="create-remove-btn">
+        <button class="button-create" type="submit">Create</button>
+        <a class="button button-remove" href="/authors">Cancel</a>   
+    </div>
 </form>

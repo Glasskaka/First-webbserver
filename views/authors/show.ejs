@@ -1,13 +1,17 @@
-<h2><%= author.name %> </h2>
-<a class="button button-edit inline" href="/authors/<%= author.id %>/edit ">Edit</a>
-<%- include("../partials/deleteForm", {url: `/authors/${author.id}`}) %> 
+<h2 class="section-title"><%= author.name %></h2>
+<div id="create-remove-btn">
+    <a class="button button-edit inline" href="/authors/<%= author.id %>/edit ">Edit</a>
+    <%- include("../partials/deleteForm", {url: `/authors/${author.id}`}) %> 
+</div>
 <% if (booksByAuthor.length > 0) {%> 
-    <h2>Books By Author</h2>
+    <h2 class="no-margin-bot">Books By <%= author.name %></h2>
+    <div class="section-list book-list">
     <% booksByAuthor.forEach(book => { %> 
         <a href="/books/<%= book.id %> ">
-            <img height="150" width="100" src="<%= book.coverImagePath %>"> <!-- uses the virtual property -->
+            <img src="<%= book.coverImagePath %>"> <!-- uses the virtual property -->
         </a>
-    <% }) %> 
+    <% }) %>
+    </div> 
 <% } else { %> 
     <h2>Author has no published books</h2> 
 <% } %> 

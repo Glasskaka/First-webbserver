@@ -1,9 +1,11 @@
-<h1>Online Library</h1>
-<h2>Recently Added Books</h2>
-<div>
-    <% books.forEach(book => { %> 
-        <a href="/books/<%= book.id %> ">
-            <img height="150" width="100" src="<%= book.coverImagePath %>"> <!-- uses the virtual property -->
-        </a>
-    <% }) %> 
-</div>
+<section>
+    <h1>My Personal Library.</h1>
+    <h2>Recently Added Books</h2>
+    <div class="section-list book-list">
+        <% books.forEach(book => { %> 
+            <a href="/books/<%= book.id %> ">
+                <img src="<%= book.coverImagePath %>"> <!-- uses the virtual property -->
+            </a>
+        <% }) %> 
+    </div>
+</section>

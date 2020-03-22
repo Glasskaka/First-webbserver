@@ -1,6 +1,8 @@
-<h2>Edit Book</h2>
-<form action="/books/<%= book.id %>?_method=PUT" method="POST">
+<h2 class="section-title">Edit Book</h2>
+<form class="section-search add-book" action="/books/<%= book.id %>?_method=PUT" method="POST">
     <%- include('_form_fields') %>
-    <button class="button-create" type="submit">Update</button>
-    <a class="button button-remove" href="/books">Cancel</a>
+    <div id="create-remove-btn">
+        <button class="button-create" type="submit">Update</button>
+        <a class="button button-remove" href="/books">Cancel</a>
+    </div>
 </form>

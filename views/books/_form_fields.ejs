@@ -1,11 +1,10 @@
-
 <div class="form-data">
     <label>Title</label>
     <input type="text" name="title" value="<%= book.title %>">
   </div>
   <div class="form-data"> 
     <label>Author</label>
-    <select name="author">
+    <select class="button" name="author">
     <% authors.forEach(author => { %>
       <% if (author.id === book.author) { %>
         <option selected label="<%= author.name %>" value="<%= author.id %>">
@@ -32,5 +31,5 @@
   </div>
   <div class="form-data">
     <label>Description</label>
-    <textarea name="description"><%= book.description %></textarea>
+    <textarea rows="4" maxlength="100" placeholder="Write here..." name="description"><%= book.description %></textarea>
   </div>

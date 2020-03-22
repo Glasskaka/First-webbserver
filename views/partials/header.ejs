@@ -3,41 +3,45 @@
         
         <ul>
             <li>
-                <a href="/">
+                <a class="nav-option" href="/">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="/authors">
+                <a class="nav-option" href="/authors">
                     <i class="fas fa-user-friends"></i>
                     <span>Authors</span>
                 </a>
             </li>
             <li>
-                <a href="/authors/new">
+                <a class="nav-option" href="/authors/new">
                     <i class="fas fa-user-plus"></i>
                     <span>Add&nbspAuthor</span>
                 </a>
             </li>
             <li>
-                <a href="/books">
+                <a class="nav-option" href="/books">
                     <i class="fas fa-book"></i>
                     <span>Books</span>
                 </a>
             </li>
             <li>
-                <a href="/books/new">
+                <a class="nav-option" href="/books/new">
                     <i class="fas fa-book-medical"></i>
                     <span>Add&nbspBook</span>
-                </a>
-            </li>
-            <li>
-                <a href=#>
-                    <i class="fas fa-lightbulb"></i>
-                    <span>Toggle</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
+<script defer>
+    let cur = window.location.pathname;
+    let nav = document.querySelectorAll(".nav-option");
+    for (let a of nav) {
+        if (a.getAttribute("href") == cur) {
+            a.classList.add("active-page");
+        }
+        
+    }
+</script>
