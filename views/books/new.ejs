@@ -1,6 +1,8 @@
-<h2>Add New Book</h2>
-<form action="/books" method="POST"> <!-- the enctype tells the server that the form can include files -->
+<h2 class="section-title">Add a New Book</h2>
+<form class="section-search add-book" action="/books" method="POST"> <!-- the enctype tells the server that the form can include files -->
     <%- include('_form_fields') %> 
-    <button class="button-create" type="submit">Create</button>
-    <a class="button button-remove" href="/books">Cancel</a>   
+    <div id="create-remove-btn">
+        <button class="button-create" type="submit">Create</button>
+        <a class="button button-remove" href="/books">Cancel</a> 
+    </div>  
 </form>

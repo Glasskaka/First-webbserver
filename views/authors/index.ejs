@@ -1,18 +1,18 @@
-<section class="author-container">
-    <h2 class="author-title">Search Authors</h2>
-    <form class="author-search" action="/authors" method="GET">
-        <label>Name:</label>
-        <input type="text" name="name" placeholder="Bob" value="<%= searchOptions.name %> ">
-        <button type="submit">Search</button>
-    </form>
-    <div class="author-list">
-        <% authors.forEach(author => { %> 
-            <h3><%= author.name %></h3>
-            <span class="buttons">
-                <a id="view" class="button inline" href="/authors/<%= author.id %>">View</a>
-                <a id="edit" class="button button-edit inline" href="/authors/<%= author.id %>/edit">Edit</a>
-                <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %> 
-            </span>   
-        <% }) %> 
+<h2 class="section-title">Authors</h2>
+<form class="section-search search-authors" action="/authors" method="GET">
+    <div>
+        <input type="text" name="name" placeholder="Name here..." value="<%= searchOptions.name %>">
     </div>
-</section>
+    <button type="submit">Search</button>
+</form>
+<div class="section-list author-list">
+    <% authors.forEach(author => { %> 
+        <h3><%= author.name %></h3>
+        <span class="buttons">
+            <a id="view" class="button inline" href="/authors/<%= author.id %>">View</a>
+            <a id="edit" class="button button-edit inline" href="/authors/<%= author.id %>/edit">Edit</a>
+            <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %> 
+        </span>   
+    <% }) %> 
+</div>
+
