@@ -2,6 +2,10 @@
     display:grid;
     justify-content: center;
     grid-row-gap: 1rem;
+
+    &>img {
+        margin:auto;
+    }
 }
 
 .section-title {
