@@ -11,7 +11,12 @@
         <span class="buttons">
             <a id="view" class="button inline" href="/authors/<%= author.id %>">View</a>
             <a id="edit" class="button button-edit inline" href="/authors/<%= author.id %>/edit">Edit</a>
-            <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %> 
+            <button type="button" id="open-modal" class="button-remove" onclick="openConfirm(this)">Delete</button>
+        </span>
+        <span style="display: none;" class="confirmModal">
+            <strong>Are you sure?</strong>
+            <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %>
+            <button class="button-create" onclick="closeConfirm(this)">Go Back</button> 
         </span>   
     <% }) %> 
 </div>

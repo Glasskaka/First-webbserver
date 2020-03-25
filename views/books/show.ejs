@@ -5,8 +5,13 @@
 <div class="section-book-info"><b>Page Count:</b> <ins><%= book.pageCount %></ins></div>
 <div class="section-description"><b>Description:</b> <ins><%= book.description %></ins></div>
 
-<div id="view-edit-remove-btn">
+<div class="buttons" id="view-edit-remove-btn">
     <a class="button" href="/authors/<%= book.author.id %> ">View Author</a>
     <a class="button button-edit" href="/books/<%= book.id %>/edit ">Edit</a>
-    <%- include('../partials/deleteForm', {url: `/books/${book.id}`}) %> 
+    <button type="button" id="open-modal" class="button-remove" onclick="openConfirm(this)">Delete</button>
+</div>
+<div style="display: none;" class="confirmModal">
+    <strong>Are you sure?</strong>
+    <%- include('../partials/deleteForm', {url: `/books/${book.id}`}) %>
+    <button class="button-create" onclick="closeConfirm(this)">Go Back</button> 
 </div>
