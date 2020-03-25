@@ -3,11 +3,12 @@ header {
     background-color: black;
     transition: width 500ms ease;
     overflow: hidden;
+    z-index: 10;
 
-    .active-page{ //style active option
+    .active-page{ //style active page
         background-color:#222;
         i {
-            color: rgb(0, 238, 255);
+            color: $btn-create;
         }
     }
 
@@ -44,7 +45,7 @@ header {
                     background-color: #333;
 
                     i {
-                        color: #dda15e;
+                        color: $border-color;
                     }
                 }
             }
@@ -110,5 +111,4 @@ header {
             margin-left: 2rem;
         }
     }
-
 }

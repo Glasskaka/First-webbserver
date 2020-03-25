@@ -5,12 +5,14 @@ $main-secondary-color: #f9aa33;
 
 //font
 $main-font: 'Raleway', sans-serif;
+$font-color: #cbc9ad;
+$border-color: #deb887;
 
 //buttons
-$btn-basic: #cbc9ad;
+$btn-basic: $font-color;
 $btn-remove: #bc6c25;
 $btn-edit: #117cc4;
-$btn-create: rgb(0, 238, 255);
+$btn-create: #00eeff;
 
 
 //mixins
@@ -26,8 +28,8 @@ $btn-create: rgb(0, 238, 255);
     justify-self: center;
     background: $main-darker-color;
     border: none;
-    border-bottom: 1px solid burlywood;
-    border-right: 1px solid burlywood;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
     border-bottom-right-radius: 20% 100%;
     color: $btn-basic;
     outline: none;
@@ -39,5 +41,9 @@ $btn-create: rgb(0, 238, 255);
 
     &:hover, &:focus {
        border-color: $btn-create;
+    }
+
+    .search-books div & {
+        justify-self: left;
     }
 }

@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: $main-darker-color;
-    color: #cbc9ad;
+    color: $font-color;
     height: 100vh;
 }
 
@@ -21,7 +21,7 @@ h1 {
 }
 
 a, a:visited {
-    color: #cbc9ad;
+    color: $font-color;
     text-decoration: none;
 }
 
